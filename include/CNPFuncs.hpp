@@ -1,6 +1,8 @@
 #ifndef CNP_FUNCS_HPP
 #define CNP_FUNCS_HPP
 
+#include <numeric>
+
 #include <EIGEN_INC.hpp>
 #include <OCC_INC.hpp>
 

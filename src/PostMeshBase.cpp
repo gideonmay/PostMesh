@@ -14,7 +14,7 @@ PostMeshBase::PostMeshBase(const PostMeshBase& other) \
     this->mesh_edges = other.mesh_edges;
     this->mesh_faces = other.mesh_faces;
     this->projection_criteria = other.projection_criteria;
-    this->degree = degree;
+    this->degree = other.degree;
     this->imported_shape = other.imported_shape;
     this->no_of_shapes = other.no_of_shapes;
     this->geometry_points = other.geometry_points;
@@ -43,7 +43,7 @@ noexcept(std::is_copy_assignable<PostMeshBase>::value)
     this->mesh_edges = other.mesh_edges;
     this->mesh_faces = other.mesh_faces;
     this->projection_criteria = other.projection_criteria;
-    this->degree = degree;
+    this->degree = other.degree;
     this->imported_shape = other.imported_shape;
     this->no_of_shapes = other.no_of_shapes;
     this->geometry_points = other.geometry_points;
@@ -71,7 +71,7 @@ PostMeshBase::PostMeshBase(PostMeshBase&& other) noexcept :  \
     this->mesh_edges = std::move(other.mesh_edges);
     this->mesh_faces = std::move(other.mesh_faces);
     this->projection_criteria = std::move(other.projection_criteria);
-    this->degree = degree;
+    this->degree = other.degree;
     this->imported_shape = std::move(other.imported_shape);
     this->no_of_shapes = other.no_of_shapes;
     this->geometry_points = std::move(other.geometry_points);
@@ -104,7 +104,7 @@ PostMeshBase& PostMeshBase::operator=(PostMeshBase&& other) noexcept
     this->mesh_edges = std::move(other.mesh_edges);
     this->mesh_faces = std::move(other.mesh_faces);
     this->projection_criteria = std::move(other.projection_criteria);
-    this->degree = degree;
+    this->degree = other.degree;
     this->imported_shape = std::move(other.imported_shape);
     this->no_of_shapes = other.no_of_shapes;
     this->geometry_points = std::move(other.geometry_points);
